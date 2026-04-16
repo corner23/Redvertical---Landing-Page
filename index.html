@@ -149,6 +149,7 @@
     /* ── Add body padding bottom on mobile when CTA bar shown ── */
     @media (max-width: 1023px) {
       body { padding-bottom: 80px; }
+      .track-item { padding: 1rem 0; gap: 1rem; }
     }
 
     /* ── KakaoTalk floating button ── */
@@ -333,28 +334,28 @@
         <div class="reveal d2">
           <ul>
             <li class="track-item">
-              <span class="text-base font-black text-brand tracking-wide">2015</span>
-              <span class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">중국 시장 하락 가능성 경고</span>
+              <span class="text-sm lg:text-base font-black text-brand tracking-wide">2015</span>
+              <span class="text-base md:text-xl text-gray-700 leading-relaxed font-medium">중국 시장 하락 가능성 경고</span>
             </li>
             <li class="track-item">
-              <span class="text-base font-black text-brand tracking-wide">2021</span>
-              <span class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">미국 대폭적 금리인상 및 2차전지 등 주요 기술주 조정 경고</span>
+              <span class="text-sm lg:text-base font-black text-brand tracking-wide">2021</span>
+              <span class="text-base md:text-xl text-gray-700 leading-relaxed font-medium">미국 대폭적 금리인상 및 2차전지 등 주요 기술주 조정 경고</span>
             </li>
             <li class="track-item">
-              <span class="text-base font-black text-brand tracking-wide">2022</span>
-              <span class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">SVB 파산 시점 증시 바닥 예측 / K-조선과 방산 부활 예측</span>
+              <span class="text-sm lg:text-base font-black text-brand tracking-wide">2022</span>
+              <span class="text-base md:text-xl text-gray-700 leading-relaxed font-medium">SVB 파산 시점 증시 바닥 예측 / K-조선과 방산 부활 예측</span>
             </li>
             <li class="track-item">
-              <span class="text-base font-black text-brand tracking-wide">2023</span>
-              <span class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">비관론 속 시장 반등 시그널 포착, 동남아 정수기 시장 성장 전망</span>
+              <span class="text-sm lg:text-base font-black text-brand tracking-wide">2023</span>
+              <span class="text-base md:text-xl text-gray-700 leading-relaxed font-medium">비관론 속 시장 반등 시그널 포착, 동남아 정수기 시장 성장 전망</span>
             </li>
             <li class="track-item">
-              <span class="text-base font-black text-brand tracking-wide">2024</span>
-              <span class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">한반도 2개 국가 인정과 북한의 중립국화 가능성 언급</span>
+              <span class="text-sm lg:text-base font-black text-brand tracking-wide">2024</span>
+              <span class="text-base md:text-xl text-gray-700 leading-relaxed font-medium">한반도 2개 국가 인정과 북한의 중립국화 가능성 언급</span>
             </li>
             <li class="track-item" style="border-bottom: none;">
-              <span class="text-base font-black text-brand tracking-wide">2025</span>
-              <span class="text-lg md:text-xl text-gray-700 leading-relaxed font-medium">인력의 시대에서 전력의 시대로, 에너지 패권 변화 주도권 예측</span>
+              <span class="text-sm lg:text-base font-black text-brand tracking-wide">2025</span>
+              <span class="text-base md:text-xl text-gray-700 leading-relaxed font-medium">인력의 시대에서 전력의 시대로, 에너지 패권 변화 주도권 예측</span>
             </li>
           </ul>
         </div>
@@ -1039,7 +1040,7 @@
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
         <path d="M9 1C4.582 1 1 3.91 1 7.5c0 2.29 1.38 4.3 3.47 5.49L3.5 17l4.04-2.66C7.66 14.44 8.32 14.5 9 14.5c4.418 0 8-2.91 8-6.5S13.418 1 9 1z" fill="#3C1E1E"/>
       </svg>
-      카톡 문의
+      카카오톡 문의
     </a>
     <a
       href="https://forms.gle/XGMqE93BjK8j8cpJ6"
@@ -1083,20 +1084,39 @@
       }, { threshold: 0.08 });
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-      /* ── Mobile CTA bar: show after scrolling past hero ── */
+      /* ── Mobile CTA bar: show after scrolling past hero, hide at #apply ── */
       var mobileCta = document.getElementById('mobileCta');
       var heroSection = document.querySelector('section');
+      var applySection = document.getElementById('apply');
       if (mobileCta && heroSection) {
+        var heroVisible = true;
+        var applyVisible = false;
+
+        function updateCtaBar() {
+          if (!heroVisible && !applyVisible) {
+            mobileCta.classList.add('show');
+          } else {
+            mobileCta.classList.remove('show');
+          }
+        }
+
         var heroObserver = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
-            if (!entry.isIntersecting) {
-              mobileCta.classList.add('show');
-            } else {
-              mobileCta.classList.remove('show');
-            }
+            heroVisible = entry.isIntersecting;
+            updateCtaBar();
           });
         }, { threshold: 0 });
         heroObserver.observe(heroSection);
+
+        if (applySection) {
+          var applyObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              applyVisible = entry.isIntersecting;
+              updateCtaBar();
+            });
+          }, { threshold: 0 });
+          applyObserver.observe(applySection);
+        }
       }
     }());
   </script>
