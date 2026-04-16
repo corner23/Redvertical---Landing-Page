@@ -1047,17 +1047,19 @@
        SCROLL REVEAL
   ══════════════════════════════════════════ -->
   <script>
+    /* ── KakaoTalk 채널 채팅 열기 (SDK) ── */
+    function openKakaoChat() {
+      if (window.Kakao && Kakao.isInitialized() && Kakao.Channel) {
+        Kakao.Channel.chat({ channelPublicId: '_LyMIX' });
+      } else {
+        window.open('https://pf.kakao.com/_LyMIX/chat', '_blank');
+      }
+    }
+  </script>
+
+  <script>
     (function () {
       'use strict';
-
-      /* ── KakaoTalk 채널 채팅 열기 (SDK) ── */
-      function openKakaoChat() {
-        if (window.Kakao && Kakao.Channel) {
-          Kakao.Channel.chat({ channelPublicId: '_LyMIX' });
-        } else {
-          window.open('https://pf.kakao.com/_LyMIX/chat', '_blank');
-        }
-      }
 
       /* ── Scroll reveal ── */
       var io = new IntersectionObserver(function (entries) {
