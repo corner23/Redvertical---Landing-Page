@@ -1107,16 +1107,18 @@
     }());
   </script>
 
-  <!-- 카카오톡 채널 채팅 버튼 SDK -->
+  <!-- 카카오 SDK -->
   <script>
-    window.kakaoAsyncInit = function() {};
+    window.kakaoAsyncInit = function() {
+      Kakao.init('a7b666c5071430a6778677c8238eee60');
+    };
 
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.channel.min.js';
-      js.integrity = 'sha384-8oNFBbAHWVovcMLgR+mLbxqwoucixezSAzniBcjnEoumhfIbMIg4DrVsoiPEtlnt';
+      js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js';
+      js.integrity = 'sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka';
       js.crossOrigin = 'anonymous';
       fjs.parentNode.insertBefore(js, fjs);
     })(document, 'script', 'kakao-js-sdk');
