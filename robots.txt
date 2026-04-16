@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://corner23.github.io/Redvertical---Landing-Page/sitemap.xml
+Sitemap: https://redvertical.co.kr/sitemap.xml
