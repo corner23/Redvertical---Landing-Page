@@ -196,75 +196,114 @@
             <a href="#philosophy" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">왜 레드버티컬인가?</a>
             <a href="#testimonials" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">수강생 후기</a>
             <a href="#program01" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">거시경제 세미나 멤버십</a>
-            <a href="#program02" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">잃지 않는 투자를 위한 A to Z</a>
+            <a href="#program02" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">밸류에이션 분석 강의</a>
             <a href="#who-is-next" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">WHO IS NEXT?</a>
             <a href="#apply" class="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors duration-150">신청 안내</a>
           </nav>
+          <!-- 카톡 문의 - 모바일 상단 상시 배치 -->
           <a
-            href="https://forms.gle/XGMqE93BjK8j8cpJ6"
+            href="https://pf.kakao.com/_LyMIX/chat"
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden lg:inline-flex flex-shrink-0 items-center gap-2 px-6 py-2.5 text-sm font-bold text-white bg-brand transition-transform duration-150 hover:scale-[1.02]"
-            style="border-radius:4px;"
+            class="lg:hidden flex-shrink-0 inline-flex items-center justify-center gap-1.5 font-bold px-3 py-2 text-sm rounded-full"
+            style="background:#FEE500; color:#3C1E1E;"
           >
-            수강 신청하기
-            <iconify-icon icon="solar:arrow-right-bold" width="15"></iconify-icon>
+            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M9 1C4.582 1 1 3.91 1 7.5c0 2.29 1.38 4.3 3.47 5.49L3.5 17l4.04-2.66C7.66 14.44 8.32 14.5 9 14.5c4.418 0 8-2.91 8-6.5S13.418 1 9 1z" fill="#3C1E1E"/>
+            </svg>
+            톡 문의
           </a>
+          <!-- 수강신청 드롭다운 - 데스크탑 -->
+          <div class="hidden lg:block relative flex-shrink-0" id="desktopEnrollWrapper">
+            <button
+              onclick="toggleDesktopEnrollDropdown()"
+              class="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white bg-brand transition-transform duration-150 hover:scale-[1.02]"
+              style="border-radius:4px;"
+            >
+              수강 신청하기
+              <iconify-icon icon="solar:alt-arrow-down-bold" width="14"></iconify-icon>
+            </button>
+            <div id="desktopEnrollDropdown" class="hidden absolute right-0 top-[calc(100%+8px)] w-64 bg-white border border-gray-200 rounded-xl shadow-xl z-50 p-3 flex flex-col gap-2">
+              <a href="https://forms.gle/XGMqE93BjK8j8cpJ6" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center justify-between bg-brand text-white font-bold px-4 py-3 rounded-lg text-sm">
+                <span>거시경제 세미나 멤버십</span>
+                <iconify-icon icon="solar:arrow-right-bold" width="14"></iconify-icon>
+              </a>
+              <a href="https://forms.gle/qjpT6hcvyrPwZbLc9" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center justify-between border border-brand text-brand font-bold px-4 py-3 rounded-lg text-sm">
+                <span>밸류에이션 분석 강의</span>
+                <iconify-icon icon="solar:arrow-right-bold" width="14"></iconify-icon>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </nav>
+
+  <!-- 모바일 히어로 배너 이미지 -->
+  <div class="lg:hidden w-full overflow-hidden" style="aspect-ratio:16/5;">
+    <img
+      src="assets/og-banner.jpg"
+      alt="레드버티컬 배너"
+      class="w-full h-full object-cover object-center"
+      style="filter: hue-rotate(-18deg) saturate(1.5);"
+      loading="eager"
+      decoding="async"
+    />
+  </div>
 
   <!-- ══════════════════════════════════════════
        HERO — Split layout: left text / right image
   ══════════════════════════════════════════ -->
   <section class="bg-white overflow-hidden border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[80dvh] items-center gap-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[58dvh] items-center gap-0">
 
         <!-- Text -->
         <div class="py-8 sm:py-20 lg:py-28 lg:pr-16">
-          <h1 class="reveal d1 text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-gray-900 mb-8">
+          <h1 class="reveal d1 text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-8">
             &ldquo;내일 오를 급등주를<br />찾는다면,<br />
             <span class="text-brand">정중히 사양합니다.</span>&rdquo;
           </h1>
           <div class="reveal d2 w-12 h-[2px] bg-brand mb-5 md:mb-8"></div>
           <p class="reveal d2 text-base md:text-lg text-gray-500 leading-relaxed max-w-[44ch] mb-8 md:mb-12">
             <span class="text-brand font-black text-xl md:text-2xl">레드버티컬</span>은 단기 등락을 쫓지 않습니다.<br />
-            거시경제 사이클을 읽고 시장보다 2~3사이클 앞서 판단하며,<br />
-            데이터를 기반으로 한 철저한 밸류에이션을 통해<br />
+            <span class="font-semibold text-gray-700">거시경제 사이클을 읽고</span> 시장보다 2~3사이클 앞서 판단하며,<br />
+            데이터를 기반으로 한 <span class="font-semibold text-gray-700">철저한 밸류에이션 분석</span>을 통해<br />
             다른 스터디와는 차별화된<br />
             <span class="font-extrabold">잃지 않는 기준</span>을 만드는 곳입니다.
           </p>
           <div class="reveal d3 grid grid-cols-2 gap-4">
             <!-- 프로그램 1 카드 -->
-            <a href="#program01" class="group border border-gray-200 rounded-lg p-5 hover:border-brand hover:shadow-sm transition-all duration-200">
-              <p class="text-xs font-bold text-brand tracking-widest uppercase mb-2">프로그램 1</p>
-              <p class="text-base font-black text-gray-900 leading-snug mb-3">거시경제 세미나 멤버십</p>
-              <p class="text-sm text-gray-500 leading-relaxed">지속적인 거시경제 모니터링으로 경영과 투자에 올바른 의사결정 기준을 제시하는 정기 세미나</p>
-              <div class="flex items-center gap-1 mt-4 text-brand text-sm font-bold">자세히 보기 <iconify-icon icon="solar:arrow-right-bold" width="13"></iconify-icon></div>
-            </a>
+            <div class="group border border-gray-200 rounded-lg p-5 hover:border-brand hover:shadow-sm transition-all duration-200 flex flex-col">
+              <p class="text-base font-black text-gray-900 leading-snug mb-4">거시경제 세미나 멤버십</p>
+              <p class="hidden md:block text-sm text-gray-500 leading-relaxed flex-1 mb-4">지속적인 거시경제 모니터링으로 경영과 투자에 올바른 의사결정 기준을 제시하는 정기 세미나</p>
+              <div class="flex flex-col gap-2 mt-auto">
+                <a href="https://forms.gle/XGMqE93BjK8j8cpJ6" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-1 bg-brand text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  수강 신청 <iconify-icon icon="solar:arrow-right-bold" width="11"></iconify-icon>
+                </a>
+                <a href="#program01" class="flex items-center justify-center gap-1 text-brand text-xs font-bold">자세히 보기 <iconify-icon icon="solar:arrow-right-bold" width="11"></iconify-icon></a>
+              </div>
+            </div>
             <!-- 프로그램 2 카드 -->
-            <a href="#program02" class="group border border-gray-200 rounded-lg p-5 hover:border-brand hover:shadow-sm transition-all duration-200">
-              <p class="text-xs font-bold text-brand tracking-widest uppercase mb-2">프로그램 2</p>
-              <p class="text-base font-black text-gray-900 leading-snug mb-3">잃지 않는 투자를 위한 A to Z</p>
-              <p class="text-sm text-gray-500 leading-relaxed">저평가된 우량 기업을 선점하여 안전마진을 확보하는 실전 밸류에이션 강의</p>
-              <div class="flex items-center gap-1 mt-4 text-brand text-sm font-bold">자세히 보기 <iconify-icon icon="solar:arrow-right-bold" width="13"></iconify-icon></div>
-            </a>
+            <div class="group border border-gray-200 rounded-lg p-5 hover:border-brand hover:shadow-sm transition-all duration-200 flex flex-col">
+              <p class="text-base font-black text-gray-900 leading-snug mb-4">밸류에이션 분석 강의</p>
+              <p class="hidden md:block text-sm text-gray-500 leading-relaxed flex-1 mb-4">저평가된 우량 기업을 선점하여 안전마진을 확보하는 실전 밸류에이션 강의</p>
+              <div class="flex flex-col gap-2 mt-auto">
+                <a href="https://forms.gle/qjpT6hcvyrPwZbLc9" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-1 bg-brand text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  수강 신청 <iconify-icon icon="solar:arrow-right-bold" width="11"></iconify-icon>
+                </a>
+                <a href="#program02" class="flex items-center justify-center gap-1 text-brand text-xs font-bold">자세히 보기 <iconify-icon icon="solar:arrow-right-bold" width="11"></iconify-icon></a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Image: desktop full-height, mobile below text -->
-        <div class="block lg:hidden aspect-[16/9] overflow-hidden mt-2 mb-8">
-          <img
-            src="assets/pexels-alesiakozik-6770610.jpg"
-            alt="주식 캔들차트 화면"
-            class="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-        <div class="hidden lg:block relative h-full min-h-[520px]">
+        <!-- Image: desktop only -->
+        <div class="hidden lg:block relative h-full min-h-[374px]">
           <img
             src="assets/pexels-alesiakozik-6770610.jpg"
             alt="주식 캔들차트 화면"
@@ -278,6 +317,7 @@
 
       </div>
     </div>
+    <div id="heroEnd"></div>
   </section>
 
   <!-- ══════════════════════════════════════════
@@ -391,7 +431,7 @@
       <div class="mb-8 lg:mb-16">
         <p class="reveal text-base sm:text-xl font-bold tracking-[0.16em] uppercase text-brand mb-5">수강생 후기</p>
         <h2 class="reveal d1 text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-snug md:leading-relaxed text-gray-900">
-          레드버티컬과 함께<br />변화를 경험한<br />분들의 이야기
+          레드버티컬과 함께<br /><span class="text-brand">변화를 경험한</span><br />분들의 이야기
         </h2>
       </div>
 
@@ -512,10 +552,10 @@
         <!-- Text -->
         <div>
           <h2 class="reveal text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-snug md:leading-relaxed text-gray-900 mb-4">
-            레드버티컬 투자 원칙의 본질:<br />
-            <span class="text-brand">잃지 않는 투자</span>를<br />위한 A to Z
+            레드버티컬<br />
+            <span class="text-brand">밸류에이션 분석</span><br />강의
           </h2>
-          <p class="reveal d1 text-base font-semibold text-gray-400 tracking-wide mb-7">산업선정부터 밸류에이션까지</p>
+          <p class="reveal d1 text-base font-semibold text-gray-400 tracking-wide mb-7">읽지 않는 투자를 위한 A to Z (산업선정부터 밸류에이션까지)</p>
           <div class="reveal d1 w-12 h-[2px] bg-brand mb-5 md:mb-8"></div>
 
           <p class="reveal d2 text-base md:text-lg text-gray-500 leading-relaxed mb-5 md:mb-8">
@@ -829,7 +869,7 @@
                 수도권 지역: 매월 3째주 수·목·금 진행<br />
                 남부 지역: 매월 3째주 화 진행<br />
                 <br />
-                <span class="text-sm font-bold text-brand tracking-wide">잃지 않는 투자를 위한 A to Z</span><br />
+                <span class="text-sm font-bold text-brand tracking-wide">밸류에이션 분석 강의</span><br />
                 분기별 진행<br />
                 <span class="text-sm text-gray-400">(수강/멤버십 확정 시 상세 안내)</span>
               </p>
@@ -845,34 +885,6 @@
           </div>
         </div>
 
-        <!-- CTA buttons -->
-        <div class="reveal d3 flex flex-row items-center justify-center gap-3 mb-12 lg:mb-24">
-          <!-- 카톡 문의 - 데스크탑 -->
-          <a
-            href="https://pf.kakao.com/_LyMIX/chat"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hidden lg:inline-flex items-center justify-center gap-3 font-bold px-10 py-5 text-base tracking-wide transition-transform duration-150 hover:scale-[1.02]"
-            style="background:#FEE500; color:#3C1E1E;"
-          >
-            <svg width="22" height="22" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-              <path d="M9 1C4.582 1 1 3.91 1 7.5c0 2.29 1.38 4.3 3.47 5.49L3.5 17l4.04-2.66C7.66 14.44 8.32 14.5 9 14.5c4.418 0 8-2.91 8-6.5S13.418 1 9 1z" fill="#3C1E1E"/>
-            </svg>
-            카카오톡 문의
-          </a>
-          <!-- 카톡 문의 - 모바일 SDK -->
-          <div id="kakao-btn-apply-m" class="lg:hidden" data-channel-public-id="_LyMIX" data-title="question" data-size="large" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
-          <!-- 수강 신청 -->
-          <a
-            href="https://forms.gle/XGMqE93BjK8j8cpJ6"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-brand flex-1 lg:flex-none inline-flex items-center justify-center gap-3 bg-brand text-white font-bold px-4 lg:px-10 py-3 lg:py-5 text-lg lg:text-base rounded-full lg:rounded-none tracking-wide"
-          >
-            <iconify-icon icon="solar:document-add-linear" width="20"></iconify-icon>
-            수강 신청하기
-          </a>
-        </div>
 
         <!-- ── Social channels — platform brand logos ── -->
         <div class="reveal border-t border-gray-200 pt-10 lg:pt-16">
@@ -1007,19 +1019,71 @@
   <!-- ══════════════════════════════════════════
        MOBILE STICKY CTA BAR (hidden on desktop)
   ══════════════════════════════════════════ -->
+  <!-- 수강신청 드롭업 패널 -->
+  <div id="enrollDropup" class="hidden fixed bottom-[68px] left-0 right-0 z-40 bg-white border-t border-gray-200 shadow-lg px-4 py-4 flex-col gap-3 lg:hidden">
+    <p class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-1">수강 신청할 강의를 선택하세요</p>
+    <a href="https://forms.gle/XGMqE93BjK8j8cpJ6" target="_blank" rel="noopener noreferrer"
+       class="flex items-center justify-between bg-brand text-white font-bold px-5 py-3.5 rounded-lg">
+      <span>거시경제 세미나 멤버십</span>
+      <iconify-icon icon="solar:arrow-right-bold" width="16"></iconify-icon>
+    </a>
+    <a href="https://forms.gle/qjpT6hcvyrPwZbLc9" target="_blank" rel="noopener noreferrer"
+       class="flex items-center justify-between border border-brand text-brand font-bold px-5 py-3.5 rounded-lg">
+      <span>밸류에이션 분석 강의</span>
+      <iconify-icon icon="solar:arrow-right-bold" width="16"></iconify-icon>
+    </a>
+  </div>
+  <!-- 드롭업 열릴 때 뒤 배경 딤처리 -->
+  <div id="enrollBackdrop" class="fixed inset-0 z-30 bg-black/30 hidden lg:hidden" onclick="closeEnrollDropup()"></div>
+
   <!-- 모바일 하단 CTA 바 -->
   <div class="mobile-cta-bar" id="mobileCta" role="complementary" aria-label="수강 신청 바로가기">
-    <div id="kakao-btn-cta-m" data-channel-public-id="_LyMIX" data-title="question" data-size="small" data-color="yellow" data-shape="pc" data-support-multiple-densities="true"></div>
-    <a
-      href="https://forms.gle/XGMqE93BjK8j8cpJ6"
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      onclick="toggleEnrollDropup()"
       class="btn-brand flex-1 inline-flex items-center justify-center gap-2 bg-brand text-white font-bold py-2.5 text-base rounded-full tracking-wide"
     >
       <iconify-icon icon="solar:document-add-linear" width="18"></iconify-icon>
       수강 신청
-    </a>
+    </button>
   </div>
+
+  <script>
+    function toggleEnrollDropup() {
+      var panel = document.getElementById('enrollDropup');
+      var backdrop = document.getElementById('enrollBackdrop');
+      var isOpen = panel.classList.contains('flex');
+      if (isOpen) {
+        panel.classList.remove('flex');
+        panel.classList.add('hidden');
+        backdrop.classList.add('hidden');
+      } else {
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+        backdrop.classList.remove('hidden');
+      }
+    }
+    function closeEnrollDropup() {
+      var panel = document.getElementById('enrollDropup');
+      panel.classList.remove('flex');
+      panel.classList.add('hidden');
+      document.getElementById('enrollBackdrop').classList.add('hidden');
+    }
+
+    function toggleDesktopEnrollDropdown() {
+      var dd = document.getElementById('desktopEnrollDropdown');
+      dd.classList.toggle('hidden');
+      dd.classList.toggle('flex');
+    }
+
+    document.addEventListener('click', function(e) {
+      var wrapper = document.getElementById('desktopEnrollWrapper');
+      if (wrapper && !wrapper.contains(e.target)) {
+        var dd = document.getElementById('desktopEnrollDropdown');
+        dd.classList.add('hidden');
+        dd.classList.remove('flex');
+      }
+    });
+  </script>
 
   <!-- 카카오톡 플로팅 버튼 (데스크탑 전용) -->
   <a
@@ -1058,17 +1122,16 @@
 
       /* ── Mobile CTA bar: show after scrolling past hero, hide at #apply ── */
       var mobileCta = document.getElementById('mobileCta');
-      var heroSection = document.querySelector('section');
-      var applySection = document.getElementById('apply');
-      if (mobileCta && heroSection) {
+      var heroEnd = document.getElementById('heroEnd');
+      if (mobileCta && heroEnd) {
         var heroVisible = true;
-        var applyVisible = false;
 
         function updateCtaBar() {
-          if (!heroVisible && !applyVisible) {
+          if (!heroVisible) {
             mobileCta.classList.add('show');
           } else {
             mobileCta.classList.remove('show');
+            closeEnrollDropup();
           }
         }
 
@@ -1078,17 +1141,8 @@
             updateCtaBar();
           });
         }, { threshold: 0 });
-        heroObserver.observe(heroSection);
+        heroObserver.observe(heroEnd);
 
-        if (applySection) {
-          var applyObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              applyVisible = entry.isIntersecting;
-              updateCtaBar();
-            });
-          }, { threshold: 0 });
-          applyObserver.observe(applySection);
-        }
       }
     }());
   </script>
@@ -1096,7 +1150,7 @@
   <!-- 카카오 채널 SDK (모바일 버튼용) -->
   <script>
     window.kakaoAsyncInit = function() {
-      ['#kakao-btn-hero-m', '#kakao-btn-apply-m', '#kakao-btn-cta-m'].forEach(function(id) {
+      ['#kakao-btn-hero-m', '#kakao-btn-apply-m'].forEach(function(id) {
         var el = document.querySelector(id);
         if (el) Kakao.Channel.createChatButton({ container: id });
       });
