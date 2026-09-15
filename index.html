@@ -57,8 +57,6 @@
   </script>
 
   <script src="assets/tailwind.3.4.17.js"></script>
-  <link rel="icon" type="image/png" href="assets/%EB%A0%88%EB%93%9C%EB%B2%84%ED%8B%B0%EC%BB%AC%20%EB%A1%9C%EA%B3%A0_Small_White%20BG_Black%20Text_00000.png" />
-  <link rel="apple-touch-icon" href="assets/%EB%A0%88%EB%93%9C%EB%B2%84%ED%8B%B0%EC%BB%AC%20%EB%A1%9C%EA%B3%A0_Small_White%20BG_Black%20Text_00000.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css"
         integrity="sha384-uGEvnSEpW2nM9xJFsrxrwakwrk9QdDTQIBJh0hVMu90OaVyMAMpAK1rIn0/Kh1/k"
         crossorigin="anonymous" />
@@ -84,7 +82,7 @@
   <style>
     body { word-break: keep-all; }
 
-    /* ── Reveal animation (MOTION_INTENSITY: 2) ── */
+    /* ── Reveal animation ── */
     .reveal {
       opacity: 0;
       transform: translateY(22px);
@@ -497,7 +495,7 @@
             </span>
           </a>
 
-          <a href="https://youtu.be/_SD-WEiuMe8?si=Gelskk11QT9rqYw4" target="_blank" rel="noopener noreferrer"
+          <a href="https://youtu.be/_SD-WEiuMe8" target="_blank" rel="noopener noreferrer"
              class="group relative block aspect-video rounded-lg overflow-hidden shadow-md bg-black">
             <img src="https://img.youtube.com/vi/_SD-WEiuMe8/hqdefault.jpg" alt="레드버티컬 영상 3"
                  class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-300" loading="lazy" decoding="async" />
@@ -594,7 +592,7 @@
             레드버티컬<br />
             <span class="text-brand">밸류에이션 분석</span><br />강의
           </h2>
-          <p class="reveal d1 text-base font-semibold text-gray-400 tracking-wide mb-7">읽지 않는 투자를 위한 A to Z (산업선정부터 밸류에이션까지)</p>
+          <p class="reveal d1 text-base font-semibold text-gray-400 tracking-wide mb-7">잃지 않는 투자를 위한 A to Z (산업선정부터 밸류에이션까지)</p>
           <div class="reveal d1 w-12 h-[2px] bg-brand mb-5 md:mb-8"></div>
 
           <p class="reveal d2 text-base md:text-lg text-gray-500 leading-relaxed mb-5 md:mb-8">
@@ -710,11 +708,6 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       TESTIMONIALS
-       Layout: 2-col stagger
-       Bg: #ffffff
-  ══════════════════════════════════════════ -->
   <!-- ══════════════════════════════════════════
        WHO IS NEXT
        Bg: #111 (다크)
@@ -905,8 +898,8 @@
             <div class="p-4 md:p-6">
               <p class="text-base text-gray-500 leading-relaxed">
                 <span class="text-sm font-bold text-brand tracking-wide">거시경제 세미나 멤버십</span><br />
-                수도권 지역: 매월 3째주 수·목·금 진행<br />
-                남부 지역: 매월 3째주 화 진행<br />
+                수도권 지역: 매월 셋째 주 수·목·금 진행<br />
+                남부 지역: 매월 셋째 주 화 진행<br />
                 <br />
                 <span class="text-sm font-bold text-brand tracking-wide">밸류에이션 분석 강의</span><br />
                 분기별 진행<br />
@@ -1173,7 +1166,7 @@
       }, { threshold: 0.08 });
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 
-      /* ── Mobile CTA bar: show after scrolling past hero, hide at #apply ── */
+      /* ── Mobile CTA bar: show after scrolling past hero ── */
       var mobileCta = document.getElementById('mobileCta');
       var heroSection = document.querySelector('section');
       if (mobileCta && heroSection) {
